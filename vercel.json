@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "workshop_portal/wsgi.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "builds": [
+    {
+      "src": "workshop_portal/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "workshop_portal/wsgi.py"
+    }
+  ]
+}
